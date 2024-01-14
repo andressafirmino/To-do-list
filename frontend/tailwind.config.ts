@@ -9,7 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        'main-color': '#f58966'
+        'main-color': '#F16F50',
+        'sec-color': '#FDC8B4',
+        'bg-color': '#ffefe7',
+        'selected-btn': '#F8AD96'
+      },
+      width: {
+        'max-width': '1024px'
       }
     },
   },

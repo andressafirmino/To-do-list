@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
-body {
+.btn-category {
+  @apply w-48 h-9 rounded-md flex justify-center items-center cursor-pointer text-xl font-medium text-gray-600
 }
