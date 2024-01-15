@@ -17,3 +17,7 @@
 .btn-update {
   @apply w-44 h-9 rounded-md flex justify-center items-center cursor-pointer text-xl font-medium bg-blue-900 text-white
 }
+
+.btn-completed {
+  @apply w-28 h-9 rounded-md flex justify-center items-center cursor-pointer text-xl font-medium text-white
+}

@@ -3,8 +3,8 @@ import { useContext } from "react";
 import axios from "axios";
 
 export default function DeleteTask() {
-    const { setDelTask, taskId, setTaskId } = useContext(TasksContext);
-    
+    const { setDelTask, taskId } = useContext(TasksContext);
+
     function deleteTask() {
         axios.delete(`${process.env.NEXT_PUBLIC_DB_HOST}/tarefas/${taskId}`)
             .then(() => setDelTask(false))

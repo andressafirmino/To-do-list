@@ -17,7 +17,8 @@ const config: Config = {
       },
       width: {
         'max-width': '1024px',
-        'w-box': '800px'
+        'w-box': '800px',
+        'box-upd': '1000px',
       },
     },
   },
