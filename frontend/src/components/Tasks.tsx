@@ -14,7 +14,6 @@ export default function Tasks() {
     function addTask(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
-
         const body = {
             name: newTask,
             isFinished: false

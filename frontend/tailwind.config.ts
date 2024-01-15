@@ -16,8 +16,9 @@ const config: Config = {
         'tasks-color': '#fbdad0'
       },
       width: {
-        'max-width': '1024px'
-      }
+        'max-width': '1024px',
+        'w-box': '800px'
+      },
     },
   },
   plugins: [],
