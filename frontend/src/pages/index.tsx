@@ -5,7 +5,7 @@ import axios from "axios";
 import { TasksContext } from "@/context/tasks";
 
 export default function TasksPage() {
-  const { setTasks } = useContext(TasksContext);
+  const { tasks, setTasks } = useContext(TasksContext);
 
   useEffect(() => {
     axios.get(`${process.env.NEXT_PUBLIC_DB_HOST}/tarefas`)
@@ -16,7 +16,7 @@ export default function TasksPage() {
         alert(e.response.data.message);
       })
 
-  }, [])
+  }, [tasks])
 
   return (
     <>
