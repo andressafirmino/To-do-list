@@ -15,6 +15,8 @@ interface TasksContextProps {
     setTaskName: React.Dispatch<React.SetStateAction<string>>;
     taskStatus: boolean | null;
     setTaskStatus: React.Dispatch<React.SetStateAction<boolean | null>>;
+    category: string;
+    setCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const TasksContext = createContext<TasksContextProps>({
@@ -30,6 +32,8 @@ export const TasksContext = createContext<TasksContextProps>({
     setTaskName: () => { },
     taskStatus: null,
     setTaskStatus: () => { },
+    category: "",
+    setCategory: () => { },
 });
 
 interface TasksProviderProps {
@@ -44,6 +48,7 @@ export default function TasksProvider({ children }: TasksProviderProps) {
     const [updTask, setUpdTask] = useState<boolean>(false);
     const [taskName, setTaskName] = useState<string>("");
     const [taskStatus, setTaskStatus] = useState<boolean | null>(null);
+    const [category, setCategory] = useState<string>("all");
     const router = useRouter()
 
     return (
@@ -53,7 +58,8 @@ export default function TasksProvider({ children }: TasksProviderProps) {
             taskId, setTaskId,
             updTask, setUpdTask,
             taskName, setTaskName,
-            taskStatus, setTaskStatus
+            taskStatus, setTaskStatus,
+            category, setCategory
         }}>
             {children}
         </TasksContext.Provider>

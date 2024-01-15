@@ -3,7 +3,7 @@ import { useContext } from "react";
 import axios from "axios";
 
 export default function UpdateTask() {
-    const { setUpdTask, taskId, taskName, setTaskName, taskStatus, setTaskStatus } = useContext(TasksContext);
+    const { setUpdTask, taskId, taskName, setTaskName, taskStatus, setTaskStatus, tasks } = useContext(TasksContext);
 
     function updateTask() {
         const body = {
@@ -12,7 +12,7 @@ export default function UpdateTask() {
         }
         axios.put(`${process.env.NEXT_PUBLIC_DB_HOST}/tarefas/${taskId}`, body)
             .then(() => setUpdTask(false))
-            .catch(e => (alert(e.response.data.message), setUpdTask(false)))
+            .catch(e => (alert(e.response.data.message)))
     }
 
     return (

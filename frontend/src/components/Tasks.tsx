@@ -34,7 +34,7 @@ export default function Tasks() {
     return (
         <div className="w-max-width h-auto px-4 pt-16 bg-tasks-color rounded-md
         flex flex-col justify-around items-center shadow-md mx-auto mt-52 relative">
-            <IoMdAddCircle className="w-12 h-12 text-gray-700 absolute top-2 right-2" onClick={() => { add ? setAdd(false) : setAdd(true) }} />
+            <IoMdAddCircle className="w-12 h-12 text-blue-900 absolute top-2 right-2" onClick={() => { add ? setAdd(false) : setAdd(true) }} />
             {add && (
                 <form className="w-full relative" onSubmit={addTask}>
                     <input className="w-full h-10 p-3 mb-1 flex items-center rounded-md text-base font-normal border-none cursor-pointer 
