@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import Task from "./Task";
 import { IoMdAddCircle } from "react-icons/io";
 import { VscSend } from "react-icons/vsc";
-
+import { TasksContext } from "@/context/tasks";
 
 export default function Tasks() {
+    const { tasks } = useContext(TasksContext);
+
     return (
         <div className="w-max-width h-auto px-4 pt-16 bg-tasks-color rounded-md
         flex flex-col justify-around items-center shadow-md mx-auto mt-52 relative">
@@ -12,11 +15,12 @@ export default function Tasks() {
                 <input className="w-full h-10 p-3 mb-2 flex items-center rounded-md text-base font-normal border-none cursor-pointer 
             focus:outline-none placeholder-gray-500 placeholder-italic shadow-md bg-white " placeholder="Escreva a nova tarefa" type="text" />
                 <button>
-                    <VscSend className="absolute top-3 right-2"/>
+                    <VscSend className="absolute top-3 right-2" />
                 </button>
             </form>
-            <Task />
-            <Task />
+            {tasks.map((task, i) => (
+                <Task key={i} {...task}/>
+            ))}
         </div>
     )
 }
