@@ -12,7 +12,8 @@ const config: Config = {
         'main-color': '#F16F50',
         'sec-color': '#FDC8B4',
         'bg-color': '#ffefe7',
-        'selected-btn': '#F8AD96'
+        'selected-btn': '#F8AD96',
+        'tasks-color': '#fbdad0'
       },
       width: {
         'max-width': '1024px'
